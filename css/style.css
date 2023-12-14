@@ -41,6 +41,7 @@ background-color: var(--primary--color)
     padding: 2rem;
     background-color: var(--secondary-color);
     color: white;
+    cursor: pointer;
 }
 
 .img-container img {
@@ -53,6 +54,7 @@ background-color: var(--primary--color)
 
 h3 {
     margin-top: 1rem;
+    font-size: 1.5rem;
 }
 
 p {

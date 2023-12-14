@@ -13,5 +13,11 @@ createApp({
       console.log(this.diskList);
     });
   },
-  methods: {},
+  methods: {
+    getAlbum(index) {
+      axios.get(this.apiUrl).then((resp) => {
+        console.log(resp.data[index]);
+      });
+    }
+  },
 }).mount("#app");

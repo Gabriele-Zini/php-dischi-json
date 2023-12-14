@@ -18,8 +18,8 @@
       <img src="" alt="">
     </header>
     <div class="ms_body" id="app">
-      <div class="album-container">
-        <div v-for="disk in diskList" class="img-container">
+      <div class="album-container" >
+        <div v-for="(disk,index) in diskList" class="img-container" @click="getAlbum(index)" >
           <img :src="disk.poster" alt="album cover" />
           <div class="info-container">
             <h3>{{ disk.title }}</h3>
