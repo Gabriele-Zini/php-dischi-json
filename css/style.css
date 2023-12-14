@@ -95,6 +95,9 @@ p {
     justify-content: center;
     align-items: center;
     position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .album-got img {
@@ -117,11 +120,18 @@ p {
 @media screen and (max-width:1000px) {
     .img-container {
         width: calc((100% - 6rem) / 2 ) ;
+        
+    }
+    .album-got {
+        width: 80vw; 
     }
 }
 
 @media screen and (max-width:700px) {
     .img-container {
         width: 100%;
+    }
+    .album-got {
+        width: 90vw; 
     }
 }
