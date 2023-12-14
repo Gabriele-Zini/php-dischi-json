@@ -9,7 +9,8 @@ createApp({
   },
   created() {
     axios.get(this.apiUrl).then((resp) => {
-      console.log(resp)
+      this.diskList = resp.data;
+      console.log(this.diskList);
     });
   },
   methods: {},
