@@ -1,3 +1,11 @@
+/* ROOT */
+
+:root {
+    --primary--color: hsl(209.03deg 34.83% 17.45%);
+    --secondary-color:  hsl(210.97deg 47.69% 12.75%);
+    --header-color: hsl(208.8deg 67.57% 7.25%)
+}
+
 /* RESET */
 *{
     margin: 0;
@@ -11,6 +19,15 @@ img {
 
 /* BODY */
 
+header {
+    background-color: var(--header-color);
+    min-height: 80px;
+}
+
+.ms_body {
+background-color: var(--primary--color)
+}
+
 .album-container {
     display: flex;
     flex-wrap: wrap;
@@ -21,4 +38,23 @@ img {
 .img-container {
     width: calc((100% - 6rem) / 3 ) ;
     text-align: center;
+    padding: 2rem;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.img-container img {
+    width: 80%;
+}
+
+.info-container {
+    line-height: 2rem;
+}
+
+h3 {
+    margin-top: 1rem;
+}
+
+p {
+    font-size: .8rem;
 }

@@ -14,12 +14,18 @@
   </head>
 
   <body>
-    <div id="app">
+    <header>
+      <img src="" alt="">
+    </header>
+    <div class="ms_body" id="app">
       <div class="album-container">
         <div v-for="disk in diskList" class="img-container">
           <img :src="disk.poster" alt="album cover" />
-          <p>{{disk.author}}</p>
-          <h4>{{ disk.year }}</h4>
+          <div class="info-container">
+            <h3>{{ disk.title }}</h3>
+            <p>{{disk.author}}</p>
+            <h4>{{ disk.year }}</h4>
+          </div>
         </div>
       </div>
     </div>
