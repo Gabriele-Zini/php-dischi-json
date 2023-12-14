@@ -106,7 +106,8 @@ p {
 }
 
 .album-got button {
-    border: 2px solid white;
+    border: 1px solid white;
+    border-radius: 6px;
     background-color: var(--header-color);
     color: white;
     aspect-ratio: 1/1;
