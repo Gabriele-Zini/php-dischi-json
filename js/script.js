@@ -5,6 +5,7 @@ createApp({
     return {
       apiUrl: "./server.php",
       diskList: [],
+      temporaryAlbum: {},
     };
   },
   created() {
@@ -16,8 +17,12 @@ createApp({
   methods: {
     getAlbum(index) {
       axios.get(this.apiUrl).then((resp) => {
+        this.temporaryAlbum = resp.data[index];
         console.log(resp.data[index]);
       });
-    }
+    },
+    exitAlbum() {
+      this.temporaryAlbum = {};
+    },
   },
 }).mount("#app");
