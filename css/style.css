@@ -86,8 +86,7 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 30px;
-    right: 30px;
+    position: fixed;
 }
 
 .album-got img {
