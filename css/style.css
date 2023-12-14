@@ -7,15 +7,6 @@
     --pop-up-color: hsla(210, 48%, 13%, 0.849);
 }
 
-/* UTILITIES */
-
-.ms_d-none {
-    display: none;
-}
-
-.ms_d-block {
-    display: block;
-}
 
 /* RESET */
 *{
@@ -26,6 +17,20 @@
 
 img {
     max-width: 100%;
+}
+
+/* UTILITIES */
+
+.ms_d-none {
+    display: none;
+}
+
+.ms_d-block {
+    display: block;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* BODY */

@@ -18,30 +18,32 @@
       <header>
         <img src="" alt="" />
       </header>
-      <div class="album-container">
-        <div
-          v-for="(disk,index) in diskList"
-          class="img-container"
-          @click="getAlbum(index)"
-        >
-          <img :src="disk.poster" alt="album cover" />
-          <div class="info-container">
-            <h3>{{ disk.title }}</h3>
-            <p>{{disk.author}}</p>
-            <h4>{{ disk.year }}</h4>
+      <div class="container">
+        <div class="album-container">
+          <div
+            v-for="(disk,index) in diskList"
+            class="img-container"
+            @click="getAlbum(index)"
+          >
+            <img :src="disk.poster" alt="album cover" />
+            <div class="info-container">
+              <h3>{{ disk.title }}</h3>
+              <p>{{disk.author}}</p>
+              <h4>{{ disk.year }}</h4>
+            </div>
           </div>
-        </div>
-        <div
-          v-if="temporaryAlbum && Object.keys(temporaryAlbum).length > 0"
-          class="album-got"
-        >
-          <img :src="temporaryAlbum.poster" alt="album cover" />
-          <div class="info-container">
-            <h3>{{ temporaryAlbum.title }}</h3>
-            <p>{{ temporaryAlbum.author }}</p>
-            <h4>{{ temporaryAlbum.year }}</h4>
+          <div
+            v-if="temporaryAlbum && Object.keys(temporaryAlbum).length > 0"
+            class="album-got"
+          >
+            <img :src="temporaryAlbum.poster" alt="album cover" />
+            <div class="info-container">
+              <h3>{{ temporaryAlbum.title }}</h3>
+              <p>{{ temporaryAlbum.author }}</p>
+              <h4>{{ temporaryAlbum.year }}</h4>
+            </div>
+            <button @click="exitAlbum()">X</button>
           </div>
-          <button @click="exitAlbum()">X</button>
         </div>
       </div>
     </div>
