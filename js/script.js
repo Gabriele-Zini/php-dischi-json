@@ -16,10 +16,16 @@ createApp({
   },
   methods: {
     getAlbum(index) {
-      axios.get(this.apiUrl).then((resp) => {
-        this.temporaryAlbum = resp.data[index];
-        console.log(resp.data[index]);
-      });
+      axios
+        .get(this.apiUrl, {
+          params: {
+            index: index,
+          },
+        })
+        .then((resp) => {
+          this.temporaryAlbum = resp.data;
+          console.log(resp.data);
+        });
     },
     exitAlbum() {
       this.temporaryAlbum = {};
