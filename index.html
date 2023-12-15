@@ -20,8 +20,10 @@
       </header>
       <div class="container">
         <div class="album-container">
+          <!-- card -->
           <div
-            v-for="(disk,index) in diskList" :key="index"
+            v-for="(disk,index) in diskList"
+            :key="index"
             class="img-container"
             @click="getAlbum(index)"
           >
@@ -32,9 +34,12 @@
               <h4>{{ disk.year }}</h4>
             </div>
           </div>
+
+          <!-- selected card -->
           <div
             v-if="temporaryAlbum && Object.keys(temporaryAlbum).length > 0"
-            class="album-got" @click="exitAlbum()"
+            class="album-got"
+            @click="exitAlbum()"
           >
             <img :src="temporaryAlbum.poster" alt="album cover" />
             <div class="info-container">
